@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReadEasy+ - Inclusive Reader</title>
+  <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>📖 ReadEasy+</h1>
+    <p>With ReadEasy+ everyone reads easy</p>
+  </header>
+
+  <section id="controls">
+    <label for="bgColor">Background:</label>
+    <input type="color" id="bgColor" value="#ffffff" />
+
+    <label for="fontSize">Font Size:</label>
+    <input type="range" id="fontSize" min="16" max="36" value="18" />
+
+    <label for="lineSpacing">Line Spacing:</label>
+    <input type="range" id="lineSpacing" min="1" max="3" step="0.1" value="1.5" />
+
+    <label for="voiceSelect">Voice:</label>
+    <select id="voiceSelect">
+      <option value="">Select Voice</option>
+    </select>
+
+    <label for="speechSpeed">Speech Speed:</label>
+    <input type="range" id="speechSpeed" min="0.5" max="2" step="0.1" value="1" />
+
+    <button onclick="toggleHighContrast()">🌓 High Contrast</button>
+    <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <button onclick="speakText()">🔊 Read Aloud</button>
+    <button onclick="stopSpeech()">⏹️ Stop Reading</button>
+  </section>
+
+  <section>
+    <div class="file-upload-container">
+      <h3>Upload File to Extract Text</h3>
+      <div class="file-type-selector">
+        <button id="imageBtn" class="active" onclick="switchUploadType('image')">📷 Image</button>
+        <button id="pdfBtn" onclick="switchUploadType('pdf')">📄 PDF</button>
+      </div>
+      <input type="file" id="fileUpload" accept="image/*,.pdf" style="display: none;" />
+      <button class="upload-button" onclick="document.getElementById('fileUpload').click()">📁 Choose File</button>
+      <div id="processingProgress" class="processing-progress">Processing file...</div>
+    </div>
+
+    <textarea id="inputText" placeholder="Paste or type your text here..." aria-label="Text input"></textarea>
+    <div id="outputText" aria-live="polite"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

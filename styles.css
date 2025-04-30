@@ -1,0 +1,169 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: local('OpenDyslexic');
+}
+
+body {
+  font-family: 'OpenDyslexic', Arial, sans-serif;
+  background-color: #1e90ff;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 18px;
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  resize: vertical;
+  background-color: #ffffff;
+  line-height: 1.5;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#outputText {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid #007acc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  min-height: 100px;
+  font-family: 'OpenDyslexic', Arial, sans-serif !important;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: #007acc;
+  color: white;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+.high-contrast {
+  background-color: #000 !important;
+  color: #ff0 !important;
+}
+
+.dark-mode {
+  background-color: #121212 !important;
+  color: #f4f4f4 !important;
+}
+
+.file-upload-container {
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px dashed #007acc;
+  border-radius: 8px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.file-preview {
+  max-width: 100%;
+  max-height: 300px;
+  margin: 10px auto;
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.processing-progress {
+  margin: 10px 0;
+  padding: 10px;
+  display: none;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.file-type-selector {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.file-type-selector button {
+  margin: 0 5px;
+  padding: 8px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #333;
+}
+
+.file-type-selector button.active {
+  background-color: #007acc;
+  color: white;
+  border-color: #007acc;
+}
+
+.upload-button {
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.upload-button:hover {
+  background-color: #005f99;
+}
+
+section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+input[type="color"],
+input[type="range"],
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+} 
